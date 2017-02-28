@@ -1,0 +1,16 @@
+
+<h1>Today's Post</h1>
+
+
+<%= link_to "Create new post", :new_post %>
+
+<ul>
+
+    <% @posts.each do |post| %>
+        <li>
+            <strong> <%= post.title %> </strong> - <%= post.content %>
+
+            <%= link_to "More info", post_path(post) %>
+        </li>
+    <% end %>
+</ul>

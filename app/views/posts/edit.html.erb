@@ -1,0 +1,23 @@
+<h1>Editing Story of the Day</h1>
+
+
+
+<%= form_for @post do |f| %>
+
+   <div>
+       <%= f.label :title %>
+       <%= f.text_field :title %>
+   </div>
+
+   <div>
+       <%= f.label :content %>
+       <%= f.text_area :content %>
+   </div>
+
+   <%= f.submit "Submit these changes!" %>
+
+<% end %>
+
+<%= link_to "Edit this post!", edit_post_path(@post) %>
+<%= link_to "Delete this post!", :post, method: :delete, data: { confirm: "Are you sure you want to delete this bean?"} %>
+<%= link_to "Back to the post!", post_path %>

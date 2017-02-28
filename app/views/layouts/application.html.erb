@@ -9,7 +9,9 @@
   </head>
 
   <body>
-    <h1>Welcome Home <%= current_user.user_name if current_user%> | <%= link_to 'Log In', login_path %> | <%= link_to 'Log Out', logout_path, method: :delete %></h1>
+    <h1>Artysy <%= "Welcome #{current_user.user_name}" if current_user%> | <%= link_to 'Log In', login_path  %> | <%= link_to 'Log Out', logout_path, method: :delete if current_user %></h1>
+<hr>
+<hr>
     <%= yield %>
   </body>
 </html>
