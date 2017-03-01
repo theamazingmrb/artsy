@@ -22,7 +22,7 @@ class PostsController < ApplicationController
  end
 
  def create
-   @post = current_user.posts.new(post_params)
+   @post = current_user.posts.create(post_params)
    if @post.save
      redirect_to @post
    else
@@ -51,7 +51,7 @@ end
 
 private
 def post_params
- params.require(:post).permit(:title, :content)
+ params.require(:post).permit(:title, :content, :image)
 end
 
 

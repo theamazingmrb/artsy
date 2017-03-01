@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 #hide environment variables
-gem 'dotenv-rails', group: :development
+gem 'dotenv-rails', group: :development, require: 'dotenv/rails-now'
 #photouploads
 gem 'paperclip'
 gem 'aws-sdk'

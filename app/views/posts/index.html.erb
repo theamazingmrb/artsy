@@ -8,9 +8,9 @@
 
     <% @posts.each do |post| %>
         <li>
-            <strong> <%= post.title %> </strong> - <%= post.content %>
+            <strong> <%= post.title %> </strong> - <%= post.content %> <br>
 
-            <%= link_to "More info", post_path(post) %>
+            <%= link_to "More info", post_path(post) %> POSTED by: <%= post.user.f_name %>
         </li>
     <% end %>
 </ul>
