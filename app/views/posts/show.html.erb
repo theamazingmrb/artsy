@@ -1,9 +1,16 @@
 
+POSTED by: <strong><%= @post.user.f_name.capitalize %></strong>
 <h1> <%= @post.title %> </h1>
 
 <p> <%= @post.content %></p>
 
-<%= image_tag @post.image.url(:medium)%> <br>
+<% if @post.image.file? %>
+  <%= image_tag @post.image.url(:medium) %> <br>
+
+  <% end %> <br>
+
+  <%= render 'comments/comment' %>
+
 <%= link_to "Back to the list!", posts_path %>
 <%= link_to "Edit this post!", edit_post_path(@post) if @post.user == current_user %>
-<%= link_to "Delete this post!", :post, method: :delete, data: { confirm: "Are you sure you want to delete this bean?"} if @post.user == current_user %>
+<%= link_to "Delete this post!", :post, method: :delete, data: { confirm: "Are you sure you want to delete this Post?"} if @post.user == current_user %>

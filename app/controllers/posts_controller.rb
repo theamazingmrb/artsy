@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
  def show
    @post = Post.find(params[:id])
+   @comments = Comment.where(post_id: @post).order("created_at DESC")
  end
 
  def new

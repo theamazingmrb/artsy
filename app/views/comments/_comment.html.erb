@@ -1,0 +1,11 @@
+<% @comments.each do |comment| %>
+<p>comment by:<b><%= comment.user.f_name %></b></p>
+<h4><%= comment.content %></h4>
+<% if current_user == comment.user %>
+<%= link_to "Delete", [comment.post, comment], method: :delete%> |
+<%= link_to "Edit", edit_post_comment_path(comment.post, comment)%>
+<% end %>
+<% end %>
+<br>
+<hr>
+<%= render 'comments/form' %>

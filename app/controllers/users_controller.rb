@@ -16,11 +16,10 @@ class UsersController < ApplicationController
    @user.email.downcase!
 
    if @user.save
-     flash[:notice] = "Account created successfully you peasant!"
-     redirect_to users_path
+
+     redirect_to :post
    else
 
-     flash.now.alert = "you failed at creating an acount you peasant!"
      render :new
    end
  end

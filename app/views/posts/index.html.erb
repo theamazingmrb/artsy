@@ -7,10 +7,21 @@
 <ul>
 
     <% @posts.each do |post| %>
-        <li>
-            <strong> <%= post.title %> </strong> - <%= post.content %> <br>
 
-            <%= link_to "More info", post_path(post) %> POSTED by: <%= post.user.f_name %>
-        </li>
+            <strong> <%= post.title %> </strong> <br>
+            <%= post.content %> <br>
+            <%#= image_tag post.image.url(:thumb)%>
+            <% if post.image.file? %>
+              <%= image_tag post.image.url(:thumb) %> <br>
+
+              <% end %>
+              <br>
+              POSTED by: <%= post.user.f_name %> .. click to see my profile! <br>
+            <%= link_to "More info", post_path(post) %>
+
+
+        <br>
+        <br>
+        <br>
     <% end %>
 </ul>
