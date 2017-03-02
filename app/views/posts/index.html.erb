@@ -5,11 +5,12 @@
 
 <%= link_to "Create new post", :new_post %>
 
-<ul>
+<ul class="media-list">
 
     <% @posts.each do |post| %>
 
-            <strong> <%= post.title %> </strong> <br>
+        <li class="media">
+           <strong> <%= post.title %> </strong> <br>
             <%= post.content %> <br>
             <%#= image_tag post.image.url(:thumb)%>
             <% if post.image.file? %>
@@ -19,10 +20,10 @@
               <br>
               POSTED by: <%=link_to "#{post.user.f_name}", user_path(post.user)%> .. click to see my profile! <br>
             <%= link_to "More info", post_path(post) %>
+        </li>
 
-
         <br>
         <br>
-        <br>
+        <hr>
     <% end %>
 </ul>
