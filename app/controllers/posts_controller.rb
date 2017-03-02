@@ -6,7 +6,7 @@ class PostsController < ApplicationController
  end
 
  def index
-   @posts = Post.all
+   @posts = Post.all.order("created_at DESC")
  end
 
  def show
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
  end
 
  def create
-   @post = current_user.posts.create(post_params)
+   @post = current_user.posts.new(post_params)
    if @post.save
      redirect_to @post
    else

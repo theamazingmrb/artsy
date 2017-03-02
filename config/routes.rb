@@ -5,8 +5,8 @@ resources :posts do
 end
 root 'users#new'
 
-  get 'users/new' => 'users#new', as: :new_user # form for sign up
   get 'users' => 'users#index', as: :home
+  get 'users/new' => 'users#new', as: :new_user # form for sign up
   post 'users' => 'users#create'
   get 'users/:id' => 'users#show', as: :user
 

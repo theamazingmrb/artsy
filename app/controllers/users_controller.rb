@@ -9,15 +9,18 @@ class UsersController < ApplicationController
 
  def show
    @user = User.find(params[:id])
+   @user_posts = Post.where(user_id: @user).order("created_at DESC")
  end
 
  def create
    @user = User.new(user_params)
    @user.email.downcase!
 
-   if @user.save
 
-     redirect_to :post
+   if @user.save
+     session[:user_id] = @user.id.to_s
+
+     redirect_to posts_path
    else
 
      render :new

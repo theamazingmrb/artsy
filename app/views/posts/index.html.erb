@@ -1,6 +1,7 @@
 
-<h1>Today's Post</h1>
+<h1>Recent Post</h1>
 
+    <%#= link_to "Profile", current_user_show %>
 
 <%= link_to "Create new post", :new_post %>
 
@@ -16,7 +17,7 @@
 
               <% end %>
               <br>
-              POSTED by: <%= post.user.f_name %> .. click to see my profile! <br>
+              POSTED by: <%=link_to "#{post.user.f_name}", user_path(post.user)%> .. click to see my profile! <br>
             <%= link_to "More info", post_path(post) %>
 
 
