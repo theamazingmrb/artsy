@@ -16,3 +16,13 @@
  @import "bootswatch/cosmo/variables";
  @import "bootstrap";
  @import "bootswatch/cosmo/bootswatch";
+
+.fontToRED{
+  color: red;
+}
+
+.postContentBorder{
+  border: 1px solid black;
+  margin: 0 auto;
+  text-align: center;
+}

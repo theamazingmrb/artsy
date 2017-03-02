@@ -1,16 +1,19 @@
 
-<h1><%= @user.f_name%></h1>
+<h1 class="fontToRED"><%= @user.f_name.upcase%>'s Profile</h1>
 <%= link_to "Back to POST", posts_path %> <br>
 <br>
 
 <% @user_posts.each do |post| %>
 
-<%= post.title %> <br>
+<h3>  <%="Title:   #{post.title}" %> </h3>
+<br>
+<div class="postContentBorder">
 <%= post.content %> <br>
 <% if post.image.file? %>
   <%= image_tag post.image.url(:medium) %> <br>
   <% end %>
-   <br>
+</div>
+  <br>
 
   <%= link_to "Editer", edit_post_path(post) if @user == current_user%>
   <%= link_to "Deleteer", post_path(post), method: :delete, data: { confirm: "Are you sure you want to delete this Post?"} if @user == current_user%>
