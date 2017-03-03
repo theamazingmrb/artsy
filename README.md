@@ -19,7 +19,7 @@ In this Project I used:
 - bootstrap
 - Ruby
 - Ruby on Rails
-- postgresql
+- Postgresql
 - Google
 
 The bulk of the project was handled with Ruby on Rails. Rails was used to generate controllers, and models used throughout the app. Bootstrap as well as SASS and css where used to style the content on the pages.
@@ -34,7 +34,10 @@ To get start Please Navigate to the
 
 If you are fork this repo make sure to bundle install as well as run rails db:migrate.
 
+You will be taken to the account sign up page, Please enter your information to continue.
+
 ## Unsolved Problems
+There are a couple of things I wanted to add I did not get a chance too. I wanted users to be able to message each other directly. I wanted people to have the ability to add friends so that users only see post for users they follow or friend. I also wanted to add the ability for profile pictures. I also forgot the ability to update or delete a user once they are created.
 
 
 

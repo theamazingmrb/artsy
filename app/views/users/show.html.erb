@@ -7,12 +7,16 @@
 
 <h3>  <%="Title:   #{post.title}" %> </h3>
 <br>
-<div class="postContentBorder">
+
 <%= post.content %> <br>
+<br>
+
 <% if post.image.file? %>
   <%= image_tag post.image.url(:medium) %> <br>
-  <% end %>
-</div>
+<% end %>
+
+<button>view comments</button>
+
   <br>
 
   <%= link_to "Editer", edit_post_path(post) if @user == current_user%>

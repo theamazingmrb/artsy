@@ -10,10 +10,8 @@
 
   <body>
 
-    <h1>Artsy <%= "| Welcome #{current_user.f_name.capitalize}" if current_user%>  |<%= link_to 'My Profile', current_user if current_user%> | <%= link_to 'Log Out', logout_path, method: :delete if current_user %></h1>
+    <!-- <h1>Artsy <%= "| Welcome #{current_user.f_name.capitalize}" if current_user%>  |<%= link_to 'My Profile', current_user if current_user%> | <%= link_to 'Log Out', logout_path, method: :delete if current_user %></h1> -->
 
-<hr>
-<hr>
     <%= render 'partials/nav' %>
   <div class="container">
     <%= yield %>
