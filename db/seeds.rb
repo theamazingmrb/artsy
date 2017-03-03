@@ -5,9 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-post = Post.create([
-  {title: "Post 1", content: "lorem ipsum", user: 1 }
-
-
-  ])
