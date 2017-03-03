@@ -10,7 +10,7 @@ Artsy is a community for Artist. With Artsy artist have the ability to share the
 
 
 ## ERD
-![alt text](https://github.com/theamazingmrb/artsy/blob/master/assets/ERD/File_000.jpeg?raw=true)
+![alt text](https://github.com/theamazingmrb/artsy/blob/master/assets/ERD/Untitled%20Diagram.jpg?raw=true)
 
 ## Technology Used
 In this Project I used:
