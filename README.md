@@ -40,8 +40,5 @@ You will be taken to the account sign up page, Please enter your information to 
 There are a couple of things I wanted to add I did not get a chance too. I wanted users to be able to message each other directly. I wanted people to have the ability to add friends so that users only see post for users they follow or friend. I also wanted to add the ability for profile pictures. I also forgot the ability to update or delete a user once they are created.
 
 
-
-##Sign up for a Account
-
 ## Trello
 [Trello](https://trello.com/b/rrRIRtKc/artsy)
